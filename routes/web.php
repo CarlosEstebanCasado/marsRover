@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MarsRoverController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MarsRoverController::class, 'startingPoint'])->name('home');
+Route::get('/set-up-rover', [MarsRoverController::class,'recoverSetUpRobot'])->name('recoverSetUpRover');
+Route::post('/set-up-rover', [MarsRoverController::class,'setUpRobot'])->name('setUpRover');
 
-Route::post('coordinates-direction', 'RobotController@setUpRobot');
-Route::post('commands','RobotController@getCommands');
+Route::post('/commands',[MarsRoverController::class, 'giveCommandsToRover'])->name('commands');

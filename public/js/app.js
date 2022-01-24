@@ -5318,10 +5318,7 @@ Vue.component('example-component', (__webpack_require__(/*! ./components/Example
  */
 
 var app = new Vue({
-  el: '#app' //components: {
-  //  'example-component': require('./components/ExampleComponent.vue'),
-  //}
-
+  el: '#app'
 });
 
 /***/ }),
