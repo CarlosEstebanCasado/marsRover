@@ -6,3 +6,20 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.title, p{
+    color: white;
+}
+
+.background{
+    background-image: url("/images/mars.jpg"); /*In case the picture is in another folder and you are in css folder*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
